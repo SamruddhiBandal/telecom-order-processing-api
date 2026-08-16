@@ -50,3 +50,11 @@ def home():
     return {
         "message": "Telecom Order Processing API is running"
     }
+
+
+@app.get("/health")
+def health_check():
+    return {
+        "status": "healthy",
+        "service": "Telecom Order Processing API"
+    }
